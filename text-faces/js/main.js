@@ -11,7 +11,6 @@ function run() {
     ['02','03','04','05','06','07','08','09','10'].forEach(num => {
         const prevNum = +num - 1;
         const str = `#slide${num} .pin-wrapper`
-        debugger;
         const pinScene = new ScrollMagic.Scene({
             triggerElement: `#slide0${prevNum}`,
             triggerHook: 0,

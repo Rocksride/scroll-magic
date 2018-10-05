@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    box-sizing: border-box;
+    font-family: 'Mali', cursive;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+nav {
+    height: 100vh;
+    width: 100vw;
+    background-color: #111;
+    /* background-image: linear-gradient(to bottom right, #111, #555); */
+}
+
+ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    margin: 1rem;
+    list-style: none;
+}
+
+a {
+    line-height: 1.7;
+    color: ivory;
+    font-size: 6rem;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    /* border-bottom: 5px dashed #00ccdd; */
+    letter-spacing: 1rem;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.pencil {
+    animation: pulse-crimson 1s infinite;
+}
+.text-face {
+    animation: pulse 1s infinite;
+}
+@media screen and (max-width: 600px) {
+    a {
+        font-size: 2rem;
+    }
+    li {
+        margin: 1rem;
+    }
+}
+a:hover,
+a:active {
+    border-bottom: 1rem double #00ccdd;
+    color: #555;
+}
+a:active {
+    box-shadow: inset 0 0 1rem 5rem #00ccdd;
+    color: #555;
+}
+
+
+@keyframes pulse {
+    from {
+        border-bottom: 1rem double #00ccdd;
+    }
+    to {
+        border-bottom: 1rem dashed #00ccdd;
+    }
+}
+@keyframes pulse-crimson {
+    from {
+        border-bottom: 1rem double crimson;
+    }
+    to {
+        border-bottom: 1rem dashed crimson;
+    }
+}
