@@ -57,6 +57,9 @@ a {
 .flowing-text {
     animation: pulse-purple 1s infinite;
 }
+.scroll-text {
+    animation: pulse-green 1s infinite;
+}
 @media screen and (max-width: 600px) {
     a {
         font-size: 2rem;
@@ -98,6 +101,14 @@ a:active {
     }
     to {
         border-bottom: 1rem dashed #f0f;
+    }
+}
+@keyframes pulse-green {
+    from {
+        border-bottom: 1rem double rgb(30, 179, 80);
+    }
+    to {
+        border-bottom: 1rem dashed rgb(30, 179, 80);
     }
 }
 
