@@ -54,6 +54,9 @@ a {
 .text-face {
     animation: pulse 1s infinite;
 }
+.flowing-text {
+    animation: pulse-purple 1s infinite;
+}
 @media screen and (max-width: 600px) {
     a {
         font-size: 2rem;
@@ -87,5 +90,13 @@ a:active {
     }
     to {
         border-bottom: 1rem dashed crimson;
+    }
+}
+@keyframes pulse-purple {
+    from {
+        border-bottom: 1rem double #f0f;
+    }
+    to {
+        border-bottom: 1rem dashed #f0f;
     }
 }
