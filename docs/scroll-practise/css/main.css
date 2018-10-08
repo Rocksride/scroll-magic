@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    font-weight: 400;
+    line-height: 1.7;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    padding: 3rem;
+}
+
+.greetings {
+    background-color: #111;
+}
+.wrapper {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.title {
+    position: relative;
+    font-size: 3rem;
+    color: ivory;
+    font-weight: 700;
+}
+
+.subtitle {
+    position: relative;
+    text-align: right;
+    font-size: 4rem;
+    font-weight: 400;
+    color: ivory;
+}
+
+.subtitle a {
+    font-size: 4rem;
+    display: inline-block;
+    color: crimson;
+    padding-bottom: 1rem;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+}
+
+.subtitle a::before,
+.subtitle a::after {
+    position: absolute;
+    content: 'rocksride';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+.subtitle a::before {
+    z-index: -1;
+    color: royalblue;
+}
+.subtitle a::after {
+    z-index: -2;
+    color: purple;
+}
+.subtitle a:hover::before {
+    animation-name: glitch;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-duration: .4s;
+    animation-direction: both;
+}
+
+.subtitle a:hover::after {
+       animation-name: glitch;
+       animation-iteration-count: infinite;
+       animation-direction: reverse;
+       animation-timing-function: linear;
+       animation-duration: .3s;
+}
+
+
+
+@keyframes glitch {
+    from {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(5px, 5px);
+    }
+    40% {
+        transform: translate(5px, -5px);
+    }
+    60% {
+        transform: translate(-5px, 5px);
+    }
+    80% {
+        transform: translate(-5px, -5px);
+    }
+    to {
+        transform: translate(0);
+    }
+}
+.container p {
+    color: mintcream;
+}
+.ending > * {
+    font-size: 7rem;
+}
+
+.greetings-1 .title {
+    color: green;
+}
+.p1, .p2, .p3 {
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    text-transform: uppercase;
+    display: block; 
+    /* text-align: center; */
+    font-size: 9rem;
+    letter-spacing: -10px;
+    color: ivory;
+}
+.line {
+    line-height: 0.8;
+    
+    position: relative !important;
+    overflow: hidden !important;
+    height: 70px !important;
+    /* margin: 1rem; */
+}
+
+.line-1, .line-3{
+        transform: skew(60deg, -30deg) scaleY(.66667);
+}
+.line-2{
+        transform: translateX(41px) skew(0deg, -30deg) scaleY(1.33333);
+}
+.line-3 {
+        transform: translateX(82px) skew(60deg, -30deg) scaleY(.66667);
+}
+/* .line-1 > * {
+    transform: translateY(-100%);
+} */
